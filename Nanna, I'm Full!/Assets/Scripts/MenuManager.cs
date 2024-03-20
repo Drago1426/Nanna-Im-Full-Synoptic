@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject backButton; // Assign your back button here
 
     // Call this function to show the credits
-    public void ShowCredits()
+    private void ShowCredits()
     {
         // Hide the specified main menu objects
         foreach (GameObject obj in mainMenuUI)
@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour
     }
 
     // Call this function when the back button is pressed
-    public void HideCredits()
+    private void HideCredits()
     {
         // Hide the credits and back button
         creditsImage.SetActive(false);

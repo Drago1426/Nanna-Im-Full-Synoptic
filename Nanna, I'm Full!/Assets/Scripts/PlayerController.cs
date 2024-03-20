@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void PlayerHurt()
+    internal void PlayerHurt()
     {
         health--;
         UpdateHeartDisplay();

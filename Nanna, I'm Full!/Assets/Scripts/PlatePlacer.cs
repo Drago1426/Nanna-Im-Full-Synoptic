@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatePlacer : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class PlatePlacer : MonoBehaviour
     [SerializeField] private List<GameObject> cleanPlates = new List<GameObject>();
     // Start is called before the first frame update
 
-    public void Start()
+    private void Start()
     {
         plateHealth = 3;
         originalCleanPlateSpawnPointPosition = spawnPointCleanPlate.transform.position;
@@ -95,6 +96,6 @@ public class PlatePlacer : MonoBehaviour
     private void PlateCrashing()
     {
         Debug.Log("All the plates are crashing!!!!");
-        //SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene("EndScreen");
     }
 }
