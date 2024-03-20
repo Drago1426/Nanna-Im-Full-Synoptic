@@ -3,10 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private void OnMouseDown()
+    public void LoadTargetScene(string sceneName)
     {
-        // This code will run when the sprite is clicked
-        // Replace 'YourSceneName' with the actual scene name you want to load
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(sceneName);
     }
 }
