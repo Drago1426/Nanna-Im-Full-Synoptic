@@ -1,25 +1,25 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatePlacer : MonoBehaviour
 {
-    public GameObject spawnPointFood;
-    public GameObject spawnPointCleanPlate;
-    public GameObject platePrefab;
-    public GameObject cleanPlatePrefab;
+    [SerializeField] private GameObject spawnPointFood;
+    [SerializeField] private GameObject spawnPointCleanPlate;
+    [SerializeField] private GameObject platePrefab;
+    [SerializeField] private GameObject cleanPlatePrefab;
     private Vector3 originalCleanPlateSpawnPointPosition;
 
     
-    public GrandmaController grandmaController; // Add this public variable
+    [SerializeField] private GrandmaController grandmaController; // Add this public variable
 
 
-    public int numOfPlates;
-    public int numOfCleanPlates;
+    public int numOfPlates { get; set; } = 0;
+    public int numOfCleanPlates { get; set; } = 0;
 
-    public float plateHealth = 3;
+    public float plateHealth { get; set; } = 3;
 
-    public List<GameObject> plates = new List<GameObject>();
-    public List<GameObject> cleanPlates = new List<GameObject>();
+    [SerializeField] private List<GameObject> plates = new List<GameObject>();
+    [SerializeField] private List<GameObject> cleanPlates = new List<GameObject>();
     // Start is called before the first frame update
 
     public void Start()
@@ -92,7 +92,7 @@ public class PlatePlacer : MonoBehaviour
         spawnPointCleanPlate.transform.position = originalCleanPlateSpawnPointPosition;
     }
     
-    public void PlateCrashing()
+    private void PlateCrashing()
     {
         Debug.Log("All the plates are crashing!!!!");
         //SceneManager.LoadScene(sceneToLoad);

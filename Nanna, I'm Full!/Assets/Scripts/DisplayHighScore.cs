@@ -3,7 +3,7 @@ using TMPro;
 
 public class DisplayHighScore : MonoBehaviour
 {
-    public TextMeshProUGUI highScoreText;
+    [SerializeField] private TextMeshProUGUI highScoreText;
 
     void Start()
     {

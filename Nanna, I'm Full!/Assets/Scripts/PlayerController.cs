@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public Animator animator;
-    public Animator dogAnimator;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI yourScoreText;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Animator dogAnimator;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI yourScoreText;
 
-    public PlatePlacer platePlacer;
+    [SerializeField] private PlatePlacer platePlacer;
     private int score;
-    public int health = 3;
+    private int health = 3;
     private float scoreTimer;
     private float scoreInterval = 1f;
     
-    public Image[] hearts;
+    [SerializeField] private Image[] hearts;
     
     void Update()
     {

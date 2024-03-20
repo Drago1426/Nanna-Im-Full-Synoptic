@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BackButtonScript : MonoBehaviour
 {
-    public GameObject[] mainMenuUI; // Assign the objects you want to show here
-    public GameObject creditsImage; // Assign your credits image here
-    public GameObject backButton; // Assign your back button here
+    [SerializeField] private GameObject[] mainMenuUI; // Assign the objects you want to show here
+    [SerializeField] private GameObject creditsImage; // Assign your credits image here
+    [SerializeField] private GameObject backButton; // Assign your back button here
 
     public void OnMouseDown()
     {

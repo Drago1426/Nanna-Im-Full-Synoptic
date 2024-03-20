@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class GrandmaController : MonoBehaviour
 {
-    public Animator animator;
-    public GameObject player;
-    public PlatePlacer platePlacer;
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject player;
+    [SerializeField] private PlatePlacer platePlacer;
     private Vector3 originalPosition;
-    public GameObject targetPositionObject;
+    [SerializeField] private GameObject targetPositionObject;
 
     
     private float minLookTimer = 3f;
@@ -16,11 +16,11 @@ public class GrandmaController : MonoBehaviour
     private float minWorkTimer = 5f;
     private float maxWorkTimer = 7f;
     
-    public float difficultyIncrease = 0.15f; // The amount by which the timers are decreased
-    public float minTimerLimit = 1f; // Minimum limit for timers to prevent them from becoming too short
-    public float maxTimerLimit = 3f;
+    [SerializeField] private float difficultyIncrease = 0.15f; // The amount by which the timers are decreased
+    [SerializeField] private float minTimerLimit = 1f; // Minimum limit for timers to prevent them from becoming too short
+    [SerializeField] private float maxTimerLimit = 3f;
 
-    public float timeToHit = 5f;
+    [SerializeField] private float timeToHit = 5f;
 
     private GrandmaState state = GrandmaState.NotLooking;
 

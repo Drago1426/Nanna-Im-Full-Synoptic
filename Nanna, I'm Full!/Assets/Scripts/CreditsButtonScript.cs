@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class CreditsButtonScript : MonoBehaviour
 {
-    public GameObject[] mainMenuUI; // Assign all the UI elements of the main menu here
-    public GameObject creditsImage; // Assign your credits image here
-    public GameObject backButton; // Assign your back button here
+    [SerializeField] private GameObject[] mainMenuUI; // Assign all the UI elements of the main menu here
+    [SerializeField] private GameObject creditsImage; // Assign your credits image here
+    [SerializeField] private GameObject backButton; // Assign your back button here
 
     private void OnMouseDown()
     {

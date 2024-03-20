@@ -3,7 +3,7 @@ using TMPro;
 
 public class EndScreenManager : MonoBehaviour
 {
-    public TextMeshProUGUI yourScoreText;
+    [SerializeField] private TextMeshProUGUI yourScoreText;
 
     void Start()
     {
